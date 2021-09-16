@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'kotlin-android'
+
+apply {
+    from '../commons.gradle'
+}
+
+android {
+    compileSdkVersion extCompileSdkVersion
+    buildToolsVersion extBuildToolsVersion
+
+    defaultConfig {
+        applicationId "com.tokbox.sample.sharedwhiteboard"
+        minSdkVersion 21
+        targetSdkVersion extTargetSdkVersion
+        versionCode extVersionCode
+        versionName extVersionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled extMinifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Dependency versions are defined in the ../../commons.gradle file
+    implementation "com.opentok.android:opentok-android-sdk:${extOpentokSdkVersion}"
+    implementation "androidx.appcompat:appcompat:${extAppCompatVersion}"
+    implementation "com.github.skydoves:colorpickerview:2.2.3"
+    implementation "pub.devrel:easypermissions:${extEasyPermissionsVersion}"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

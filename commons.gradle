@@ -1,0 +1,26 @@
+
+/*
+Dependency versions
+*/
+ext {
+    extAgpVersion="4.2.1"
+    extCompileSdkVersion=31
+    extBuildToolsVersion="30.0.2"
+    extMinSdkVersion=16
+    extTargetSdkVersion=30
+    extVersionCode=1
+    extVersionName="1.0"
+    extMinifyEnabled=false
+    extOpentokSdkVersion="2.20.1"
+
+    extAppCompatVersion="1.2.0"
+    extEasyPermissionsVersion="3.0.0"
+    extConstraintLyoutVersion="2.0.4"
+    extArCoreVersion="1.22.0"
+    extSceneFormVersion="1.17.1"
+    extRetrofitVersion="2.9.0"
+    extOkHttpVersion="4.8.1"
+    extRetrofit2ConverterMoshi="2.9.0"
+    extOkHttpLoggingInterceptor="4.9.0"
+}
+
